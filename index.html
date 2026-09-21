@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch教材・生徒作品一覧</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f4f4f4] text-[#333] p-6 font-sans leading-relaxed">
+    <main class="max-w-[1360px] mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-6">Scratch教材＆生徒作品 プレイサイト</h1>
+        
+        <p id="jump-to-container" class="mb-6">
+            Jump to...
+            <a class="font-bold text-[#007bff] underline hover:opacity-70 transition-opacity duration-100" href="#header-taikenn">体験</a>
+            <a class="font-bold text-[#007bff] underline hover:opacity-70 transition-opacity duration-100" href="#header-syokyuu">初級</a>
+            <a class="font-bold text-[#007bff] underline hover:opacity-70 transition-opacity duration-100" href="#header-tyuukyuu">中級</a>
+            <a class="font-bold text-[#007bff] underline hover:opacity-70 transition-opacity duration-100" href="#header-joukyuu">上級</a>
+        </p>
+        
+
+        <div>
+            <!-- タブボタン -->
+            <div class="flex gap-1 pl-2 -mb-px relative z-10">
+                <button
+                    id="tab-text"
+                    class="tab-btn px-5 py-2.5 rounded-t-lg font-bold border border-b-0 border-[#ddd] bg-white text-[#333]"
+                    onclick="switchTab('text')"
+                >
+                    教材
+                </button>
+                <button
+                    id="tab-students"
+                    class="tab-btn px-5 py-2.5 rounded-t-lg font-bold border border-b-0 border-[#ddd] bg-[#e6f0fa] text-[#007bff] hover:bg-[#d8e8f8]"
+                    onclick="switchTab('students')"
+                >
+                    生徒作品
+                </button>
+            </div>
+
+            <!-- 教材 -->
+            <div id="content-text" class="w-full tab-content bg-white p-5 rounded-b-[8px] rounded-tr-[8px] border border-[#ddd] shadow-[0_2px_4px_rgba(0,0,0,0.1)] space-y-8">
+                <!-- 体験 -->
+                <section>
+                    <h2 id="header-taikenn" class="text-2xl font-bold mb-3">体験</h2>
+                    <div id="table-taiken"></div>
+                </section>
+
+                <!-- 初級 -->
+                <section>
+                    <h2 id="header-syokyuu" class="text-2xl font-bold mb-3">初級</h2>
+                    <div id="table-syokyuu"></div>
+                </section>
+
+                <!-- 中級 -->
+                <section>
+                    <h2 id="header-tyuukyuu" class="text-2xl font-bold mb-3">中級</h2>
+                    <div id="table-tyuukyuu"></div>
+                </section>
+
+                <!-- 上級 -->
+                <section>
+                    <h2 id="header-joukyuu" class="text-2xl font-bold mb-3">上級</h2>
+                    <div id="table-joukyuu"></div>
+                </section>
+            </div>
+
+            <!-- 生徒作品 -->
+            <div id="content-students" class="w-full tab-content hidden bg-white p-5 rounded-b-[8px] rounded-tr-[8px] border border-[#ddd] shadow-[0_2px_4px_rgba(0,0,0,0.1)]">
+                <section>
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mb-3">
+                        <h2 class="text-2xl font-bold">生徒作品</h2>
+                        <a href="https://forms.gle/KSrfjyhu9gQmLAwx8" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-[#007bff] underline hover:opacity-70 transition-opacity">応募はこちら</a>
+                    </div>
+                    <div id="table-students"></div>
+                </section>
+            </div>
+        </div>    
+        
+    </main>
+
+    <script src="js/index.js" defer></script>
+</body>
+</html>
