@@ -566,11 +566,13 @@ function renderCards(dataList, containerId, isStudent=false){
             <table class="w-full flex-1 h-full border-collapse text-left">
                 <thead>
                     <tr class="bg-[#f8f8f8] text-[11px] font-bold">
+                        <th class="border border-[#ddd] px-2 py-0.5 text-left w-14">ID</th>
                         <th class="border border-[#ddd] px-2 py-0.5 text-left">${isStudent?'作品名':'教材名'}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td class="border border-[#ddd] px-2 py-1 text-left text-xs whitespace-nowrap font-mono">${item.id}</td>
                         <td class="border border-[#ddd] px-2 py-1 text-left text-xs leading-snug">${item.name}</td>
                     </tr>
                 </tbody>
