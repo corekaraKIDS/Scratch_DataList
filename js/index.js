@@ -347,8 +347,8 @@ const materials_tyuukyuu=[
         materials: [
             {
                 id: "B3-03",
-                name: "アキネーター",
-                link: "projects/b/B3-03 アキネーター.html",
+                name: "アキネーターゲーム",
+                link: "projects/b/B3-03 アキネーターゲーム.html",
                 image: "images/B3-03.png"
             },
             {
